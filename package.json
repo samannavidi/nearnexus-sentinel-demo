@@ -1,0 +1,10 @@
+{
+  "name": "near-nexus-sentinel-public-demo",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Standalone NEAR Hackathon security research prototype; no private strategies",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {"node": ">=24"},
+  "scripts": {"start": "node server.js", "test": "node --test tests/*.test.js"},
+  "dependencies": {}
+}

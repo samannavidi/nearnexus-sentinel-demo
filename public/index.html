@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXUS Sentinel: transparent risk signals before cross-chain execution. A NEAR Hackathon research prototype.">
+<title>NEXUS Sentinel — Research before execution</title>
+<link rel="stylesheet" href="/styles.css">
+<script defer src="/app.js"></script>
+<script defer src="/market.js"></script>
+</head>
+<body>
+<div class="layout">
+<aside class="side">
+ <div class="brand"><div class="mark">N</div><div><b>NEAR NEXUS</b><small>SENTINEL / PUBLIC DEMO</small></div></div>
+ <div class="section-label">MISSION CONTROL</div>
+ <nav aria-label="Main sections">
+  <a class="active" href="#overview"><span>◈</span> Overview</a>
+  <a href="#platform"><span>✦</span> Token & NFT Hunters</a>
+  <a href="#market"><span>▥</span> NEAR Trading Terminal</a>
+  <a href="#lab"><span>◇</span> Sentinel Lab</a>
+  <a href="#evidence"><span>⌘</span> Evidence Verification</a>
+  <a href="#intents"><span>⇄</span> NEAR Intents</a>
+  <a href="#scope"><span>▣</span> Scope & Limitations</a>
+ </nav>
+ <div class="sidebar-note"><span class="status-dot"></span> SELF-CUSTODY / NO EXECUTION
+ <p>No wallet connection, private keys, deposits, or live trading. The original NEXUS strategies and databases are not included.</p></div>
+ <div class="sidebar-foot">BUILT FOR NEAR HACKATHON 2026<br>Independent, sanitized public prototype</div>
+</aside>
+<main>
+ <header class="topbar"><span class="tiny">NEXUS / INTELLIGENCE / SAFETY</span><div class="tag">EVALUATION-ONLY BUILD</div></header>
+ <section class="hero" id="overview">
+  <div class="eyebrow"><i class="pulse"></i> NEXUS / MARKET INTELLIGENCE + SECURITY</div>
+  <h1>Discover markets.<br><em>Understand the risk.</em></h1>
+  <p>A unified vision for advanced token and NFT discovery, candle charts, liquidity intelligence, crypto news, and cross-chain execution safety. The original NEXUS is private; this public demo shows a working, limited subset—without revealing proprietary strategies.</p>
+  <div class="hero-actions"><a class="button primary" href="#market">EXPLORE LIVE NEAR MARKET <span>↗</span></a><a class="button muted" href="#platform">EXPLORE THE PLATFORM</a><a class="button muted" href="#lab">RUN SECURITY LAB</a></div>
+  <div class="hero-art" aria-hidden="true"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orbit"><span>N</span></div></div>
+ </section>
+ <section class="stats">
+  <div class="metric"><small>POLICY EXECUTION</small><strong>FAIL-CLOSED</strong><span>Missing critical evidence blocks</span></div>
+  <div class="metric"><small>RESEARCH DOMAINS</small><strong>03</strong><span>Tokens · NFTs · News</span></div>
+  <div class="metric"><small>PROOF MODE</small><strong>SHA-256</strong><span>Reproducible offchain receipts</span></div>
+  <div class="metric"><small>TRANSACTION MODE</small><strong class="amber">DISABLED</strong><span>No signed orders or transfers</span></div>
+ </section>
+ <section class="panel" id="platform">
+  <div class="eyebrow">01 / THE FULL NEXUS VISION</div>
+  <h2>One intelligence workspace. Multiple specialized engines.</h2>
+  <p>The original NEXUS is a broader private product. This repository demonstrates a limited public subset; capabilities below are labeled by maturity to avoid confusing product scope with publicly proven functions.</p>
+  <div class="vision-grid">
+   <article class="vision-card"><div class="vision-icon">◎</div><div class="vision-top"><h3>Advanced Token Hunter</h3><span class="maturity">PRIVATE PRODUCT + EXPANDING</span></div><p>Discover emerging tokens across DEX ecosystems, study liquidity, pair age, trade activity and suspicious volume patterns. More comprehensive multi-chain risk intelligence and execution-quality checks remain in development. Proprietary selection logic is excluded.</p><div class="vision-foot">DISCOVERY · QUALITY · RISK RESEARCH</div></article>
+   <article class="vision-card"><div class="vision-icon">◇</div><div class="vision-top"><h3>NFT Hunter & Marketplace Research</h3><span class="maturity">PRIVATE PRODUCT + EXPANDING</span></div><p>Inspect NFT collections, floor price, supply, ownership concentration proxies and market activity. Verified item-level listings, ownership proof, and cross-network purchase routing are next-stage work—not a completed public trading engine.</p><div class="vision-foot">COLLECTION INTELLIGENCE · LISTING PROOF</div></article>
+   <article class="vision-card"><div class="vision-icon">▥</div><div class="vision-top"><h3>Pro Charts & Liquidity Terminal</h3><span class="maturity active-maturity">NEAR PUBLIC SHOWCASE</span></div><p>Multi-asset candle charts, a separate Orderbook view, price/volume context and market diagnostics. The private product contains a dedicated NEAR depth recorder. This public build adds only a live NEAR candle and current orderbook snapshot.</p><div class="vision-foot">CANDLE · SPOT DEPTH · CHART RESEARCH</div></article>
+   <article class="vision-card"><div class="vision-icon">✧</div><div class="vision-top"><h3>Sentinel & NEAR Intents</h3><span class="maturity active-maturity">WORKING PUBLIC DEMO</span></div><p>Explainable token/NFT/news safety gates, reproducible synthetic research cases, and live NEAR Intents supported-asset discovery with dry-run cross-chain quotes. No wallet signing, token purchases, or settled swaps in this public demo.</p><div class="vision-foot">EVIDENCE GATES · CROSS-CHAIN PREVIEW</div></article>
+  </div>
+  <div class="vision-note"><b>Also in the broader NEXUS concept:</b> crypto-only news intelligence, skill-based games and an internal non-redeemable NEX rewards ledger. Production-grade AI models, multi-chain trade settlement, and verified NFT execution remain development goals, not claims made by this public repository.</div>
+ </section>
+ <section class="panel market-panel" id="market">
+  <div class="panel-head"><div><div class="eyebrow">02 / NEAR MARKET SHOWCASE</div><h2>NEAR / USDT · Live market intelligence</h2><p>Actual public Binance Spot REST data. Candles and a current orderbook snapshot—not replayed or invented historical depth.</p></div><button id="nearRefresh" class="button muted">REFRESH MARKET</button></div>
+  <div class="market-toolbar">
+   <div class="pair-title"><span class="market-live-dot"></span> NEARUSDT <span class="market-source">BINANCE SPOT · PUBLIC READ-ONLY</span></div>
+   <div class="timeframes"><button data-interval="1m">1m</button><button data-interval="5m" class="active">5m</button><button data-interval="15m">15m</button><button data-interval="1h">1h</button></div>
+  </div>
+  <div id="nearStatus" class="market-status">Connecting to live public market data…</div>
+  <div class="market-grid">
+    <div class="candle-panel"><div class="market-title-row"><span>PRICE ACTION / CANDLES</span><strong id="nearPrice">—</strong></div><canvas id="nearCandle" width="820" height="315" aria-label="Live NEAR candlestick chart"></canvas><div class="market-caption">LIVE PUBLIC OHLCV · Latest candle may still be forming · <span id="nearHover">Move pointer across chart to inspect a candle</span></div></div>
+    <div class="book-panel"><div class="market-title-row"><span>CURRENT SPOT DEPTH</span><span id="nearSpread">Spread —</span></div>
+      <div class="book-head"><span>PRICE / USDT</span><span>SIZE / NEAR</span></div>
+      <div class="book-columns"><div><div class="book-side-label sell">ASKS / SELL</div><div id="nearAsks" class="book-levels"></div></div><div><div class="book-side-label buy">BIDS / BUY</div><div id="nearBids" class="book-levels"></div></div></div>
+      <div class="market-caption">TOP 12 LEVELS EACH SIDE · SNAPSHOT ONLY · NOT EXECUTED TRADES</div>
+    </div>
+  </div>
+  <div class="orderbook-status">
+    <div class="live-ledger"><span class="ready-dot">●</span><strong>NEAR Orderbook</strong><small>Most mature L2 recorder in private NEXUS: 5-hour sampled quantitative history + older visual archive tiles. Not included in this public demo.</small></div>
+    <div class="watch-ledger"><span class="work-dot">◌</span><strong>BTC · ETH · SOL · SUI</strong><small>Separate recorders exist in the original environment; equal-quality history, heatmap rendering, scaling and interaction are still under validation.</small></div>
+  </div>
+  <div class="disclosure">No hidden orderbook strategy or recorded dataset is exposed. This public viewer shows live REST snapshots only. The original private NEAR recorder, multi-symbol heatmap and internal models remain unpublished.</div>
+ </section>
+ <section class="panel" id="lab">
+  <div class="panel-head"><div><div class="eyebrow">03 / SENTINEL LAB</div><h2>Test the safety gate</h2><p>Four synthetic, deterministic scenarios—never real asset recommendations.</p></div><button id="run" class="button primary">RUN 4 SAFETY TESTS</button></div>
+  <div id="scenarios" class="scenario-grid"><div class="loading">Select “Run 4 safety tests” to generate explainable receipts.</div></div>
+  <div class="panel-subhead"><h3>Inspect receipt</h3><span id="selectedTitle" class="dim">Select a scenario above</span></div>
+  <div class="receipt-layout"><div><div class="caption">POLICY RESULTS</div><div id="reasons" class="reasons"><div class="dim">No assessment selected.</div></div></div><div><div class="caption">EVIDENCE RECEIPT</div><pre id="receipt" class="code">No receipt yet.</pre><button id="copy" class="text-button" disabled>COPY RECEIPT JSON</button></div></div>
+ </section>
+ <section class="panel" id="evidence">
+  <div class="panel-head"><div><div class="eyebrow">04 / VERIFIABLE RESEARCH</div><h2>Detect receipt tampering</h2><p>Recompute a receipt checksum and policy outcome. The hash is not a signature or onchain proof.</p></div></div>
+  <div class="verify-actions"><button id="verify" class="button muted" disabled>VERIFY SELECTED RECEIPT</button><button id="tamper" class="button outline" disabled>TAMPER & VERIFY</button><span id="verifyStatus" class="verify-status">Awaiting receipt</span></div>
+ </section>
+ <section class="panel" id="intents">
+  <div class="panel-head"><div><div class="eyebrow">05 / NEAR INTEGRATION</div><h2>NEAR Intents 1Click</h2><p>Real supported-asset catalog from the NEAR Intents provider. The optional quote API enforces <code>dry: true</code> and never returns a deposit address.</p></div><button id="assets" class="button muted">LOAD LIVE ASSETS</button></div>
+  <div class="integration-grid">
+   <div class="provider-card"><div class="provider-top"><div class="provider-logo">N</div><div><strong>1Click asset discovery</strong><small>PUBLIC PROVIDER API / NO KEY</small></div></div><div id="assetStatus" class="dim">No provider request made yet.</div><div id="assetChips" class="chips"></div><p class="subnote">Live data may be unavailable if the provider is rate-limiting or network access is restricted.</p></div>
+   <div class="quote-card"><div class="caption">OPTIONAL / DRY-QUOTE SANDBOX</div><p>To request a real quote preview, provide current supported asset IDs, a positive atomic amount and chain-valid addresses. You will not sign or transfer anything.</p>
+    <form id="quoteForm">
+     <label>Origin asset ID <input name="origin_asset_id" required placeholder="nep141:wrap.near"></label>
+     <label>Destination asset ID <input name="destination_asset_id" required placeholder="Use catalog asset_id"></label>
+     <label>Atomic input amount <input name="amount_atomic" required placeholder="100000000000000000000000"></label>
+     <label>Refund wallet on origin chain <input name="refund_to" required placeholder="your-account.near"></label>
+     <label>Recipient on destination chain <input name="recipient" required placeholder="Chain-valid destination address"></label>
+     <label>Slippage (basis points) <input name="slippage_bps" type="number" min="10" max="300" value="100"></label>
+     <button class="button primary" type="submit">REQUEST DRY QUOTE ONLY</button>
+    </form>
+    <pre class="code smallcode" id="quoteResult">No quote requested.</pre>
+   </div>
+  </div>
+ </section>
+ <section class="panel scope" id="scope">
+  <div class="eyebrow">06 / SECURITY BOUNDARY</div><h2>What this prototype proves—and what it doesn't</h2>
+  <div class="scope-grid"><div><h3>Demonstrated</h3><p>Deterministic token, NFT and crypto-news policy checks; explicit reasons; receipt consistency verification; NEAR Intents public asset catalog and guarded preview-only requests.</p></div><div><h3>Not claimed</h3><p>Real AI model, verified private market signals, audited contract code, signed proof, onchain enforcement, cross-chain settlement, wallet execution, or independently verified publication timestamps.</p></div></div>
+  <div class="disclosure">This is a limited standalone demonstration. NEXUS proprietary strategies, trading models, source history, datasets and wallets are not part of this repository.</div>
+ </section>
+ <footer>© 2026 NEXUS. Evaluation-only sample. No financial advice, custody, or transaction authorization.</footer>
+</main></div>
+</body>
+</html>
